@@ -173,7 +173,10 @@ a {
   width: 100%;
 
   color: var(--header--main-color-text);
-  @include set-links-color(var(--header--main-color-text-rgb), 0);
+  // @include set-links-color(var(--header--main-color-text-rgb), 0);
+  .nav__home a {
+    border-bottom-color: transparent;
+  }
 
   .container {
     max-width: var(--nav-max-width);

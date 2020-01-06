@@ -5,7 +5,12 @@
         {{- with .Site.Params.navHome -}}
           {{- . -}}
         {{- else -}}
-          {{- .Site.Title -}}
+          {{- with .Site.Params.Logo -}}
+            {{- $logoHeight := .height | default "4rem" -}}
+            <img src="/{{ .src }}" alt="{{ . }}" style="height: {{$logoHeight}};">
+          {{- else -}}
+            {{- .Site.Title -}}
+          {{- end -}}
         {{- end -}}
       </a>
     </div>
