@@ -43,4 +43,7 @@
   {{/* Concat and link CSS files */}}
   {{- $css := $css_files | resources.Concat "main.css" | minify | fingerprint "sha512" -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
+
 </head>
